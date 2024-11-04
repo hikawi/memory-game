@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { $form } from "@/i18n";
 import { $locale, $localeStore } from "@/stores/locale";
+import { $settings } from "@/stores/settings";
 import { useStore } from "@nanostores/vue";
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import RadioInput from "./RadioInput.vue";
@@ -9,7 +10,7 @@ const form = useStore($form);
 
 const theme = ref("numbers");
 const players = ref("1");
-const grid = ref("4x4");
+const grid = ref("4");
 const language = ref($localeStore.get());
 
 const width = ref(0);
@@ -39,6 +40,15 @@ onUnmounted(() => {
 watch(language, (val) => {
   $locale.set(val);
 });
+
+function handleSubmit() {
+  $settings.set({
+    theme: theme.value,
+    players: parseInt(players.value),
+    grid: parseInt(grid.value),
+  });
+  window.location.href = "/game";
+}
 </script>
 
 <template>
@@ -62,7 +72,7 @@ watch(language, (val) => {
     <RadioInput
       :legend="form.gridSize"
       :options="['4x4', '6x6']"
-      :values="['4x4', '6x6']"
+      :values="['4', '6']"
       name="grid"
       v-model="grid"
     />
@@ -72,10 +82,13 @@ watch(language, (val) => {
       :values="['en', 'ja', 'vi']"
       name="language"
       v-model="language"
+      no-submit
     />
 
     <button
       class="mt-2 h-12 w-full rounded-full bg-orange text-lg font-bold hover:bg-[#FFB84A] focus:bg-[#FFB84A] md:mt-0 md:h-[4.3rem] md:text-[2rem]"
+      type="submit"
+      @click.prevent="handleSubmit"
     >
       {{ form.start }}
     </button>

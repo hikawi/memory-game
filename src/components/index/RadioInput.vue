@@ -6,6 +6,7 @@ const props = defineProps<{
   legend: string;
   options: string[];
   values: string[];
+  noSubmit?: boolean;
 }>();
 
 const model = defineModel<string>();
@@ -26,7 +27,16 @@ onMounted(() => {
       class="flex h-10 items-center justify-center rounded-full bg-light-gray-blue font-bold text-almost-white hover:bg-blue has-[:checked]:bg-medium-gray md:h-[3.25rem] md:text-[1.625rem]"
       v-for="(option, idx) in props.options"
     >
-      <input type="radio" :name :value="values[idx]" v-model="model" />
+      <input
+        type="radio"
+        :name
+        :value="values[idx]"
+        v-model="model"
+        v-if="noSubmit"
+        form=""
+      />
+      <input type="radio" :name :value="values[idx]" v-model="model" v-else />
+
       {{ option }}
     </label>
   </fieldset>

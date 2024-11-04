@@ -1,5 +1,6 @@
 import { $locale, $localeStore } from "@/stores/locale";
-import { cleanTestStorage, useTestStorageEngine } from "@nanostores/persistent";
+import { $settings } from "@/stores/settings";
+import { cleanTestStorage, getTestStorage, setTestStorageKey, useTestStorageEngine } from "@nanostores/persistent";
 import { cleanup, render, within } from "@testing-library/vue";
 import { page } from "@vitest/browser/context";
 import { allTasks } from "nanostores";
@@ -152,5 +153,32 @@ describe("Form", () => {
 
     await expect.element(four).not.toBeChecked();
     await expect.element(six).toBeChecked();
+  });
+
+  it("should submit", async () => {
+    render(Form);
+
+    expect(getTestStorage()["settings:theme"]).toBeUndefined();
+    expect(getTestStorage()["settings:players"]).toBeUndefined();
+    expect(getTestStorage()["settings:grid"]).toBeUndefined();
+
+    const button = page.getByRole("button", { name: /Start/i });
+    await button.click();
+
+    expect(getTestStorage()["settings:theme"]).toBe("numbers");
+    expect(getTestStorage()["settings:players"]).toBe("1");
+    expect(getTestStorage()["settings:grid"]).toBe("4");
+  });
+
+  it("should decode from localStorage", async () => {
+    setTestStorageKey("settings:theme", "icons");
+    setTestStorageKey("settings:players", "2");
+    setTestStorageKey("settings:grid", "6");
+
+    expect($settings.get()).toEqual({
+      theme: "icons",
+      players: 2,
+      grid: 6,
+    });
   });
 });

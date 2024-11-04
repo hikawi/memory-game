@@ -1,0 +1,8 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import { $settings } from "@/stores/settings";
+---
+
+<PageLayout title="Memory Game" description="The implementation of the memory game.">
+  <h1>{JSON.stringify($settings.get())}</h1>
+</PageLayout>
