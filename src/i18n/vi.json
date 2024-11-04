@@ -1,0 +1,17 @@
+{
+  "form": {
+    "selectTheme": "Chọn loại",
+    "themeNumbers": "Số",
+    "themeIcons": "Hình",
+    "numberOfPlayers": "Số người chơi",
+    "gridSize": "Độ lớn",
+    "language": "Ngôn ngữ",
+    "english": "Anh",
+    "japanese": "Nhật",
+    "vietnamese": "Việt",
+    "englishSmall": "Anh",
+    "japaneseSmall": "Nhật",
+    "vietnameseSmall": "Việt",
+    "start": "Bắt đầu"
+  }
+}

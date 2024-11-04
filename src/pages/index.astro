@@ -1,16 +1,14 @@
 ---
-
+import Form from "@/components/index/Form.vue";
+import PageLayout from "@/layouts/PageLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PageLayout
+  title="Memory game"
+  description="A game about remembering, could be played singleplayer or multiplayer. A challenge by Frontend Mentor."
+>
+  <main class="flex h-fit min-h-screen flex-col items-center justify-center gap-12 bg-dark-gray p-6 py-20 md:gap-20">
+    <span class="font-atkinson-hyperlegible text-[2rem] font-bold text-almost-white md:text-[2.5rem]">memory</span>
+    <Form client:load />
+  </main>
+</PageLayout>

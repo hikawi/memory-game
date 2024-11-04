@@ -1,3 +1,19 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "types": [
+      "@testing-library/jest-dom",
+      "@vitest/browser/providers/playwright"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@t/*": [
+        "./tests/*"
+      ],
+    }
+  }
 }
