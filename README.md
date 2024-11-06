@@ -1,47 +1,78 @@
-# Astro Starter Kit: Minimal
+# Frontend Mentor - Memory game solution
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This is a solution to the [Memory game challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/memory-game-vse4WFPvM). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+<div align="center">
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![codecov](https://codecov.io/gh/hikawi/memory-game/graph/badge.svg?token=JLQCFG7MWD)](https://codecov.io/gh/hikawi/memory-game)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/hikawi/memory-game/vitest)
 
-## 🚀 Project Structure
+</div>
 
-Inside of your Astro project, you'll see the following folders and files:
+## Table of contents
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- [Frontend Mentor - Memory game solution](#frontend-mentor---memory-game-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Overview
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### The challenge
 
-Any static assets, like images, can be placed in the `public/` directory.
+Users should be able to:
 
-## 🧞 Commands
+- View the optimal layout for the game depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Play the Memory game either solo or multiplayer (up to 4 players)
+- Set the theme to use numbers or icons within the tiles
+- Choose to play on either a 6x6 or 4x4 grid
 
-All commands are run from the root of the project, from a terminal:
+### Screenshot
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+> This will be filled when the project is completed.
 
-## 👀 Want to learn more?
+### Links
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+> This will be filled when the project is completed.
+
+## My process
+
+### Built with
+
+- [Astro](https://astro.build/) - Server-side rendering adapter
+- [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
+- [Vue](https://vuejs.org/) - UI Library
+- [Nanostores](https://github.com/nanostores/nanostores) - State Management stores
+- [Persistent Nanostores](https://github.com/nanostores/persistent) - Sync store values to `localStorage` for game related data.
+- [I18n Nanostores](https://github.com/nanostores/i18n) - Provide translations in the form of stores.
+
+### What I learned
+
+N/A for now.
+
+### Continued development
+
+N/A for now.
+
+### Useful resources
+
+N/A for now.
+
+## Author
+
+- Website - [Luna](https://www.frilly.dev/)
+- Frontend Mentor - [@hikawi](https://www.frontendmentor.io/profile/hikawi)
+
+## Acknowledgments
+
+N/A for now.
