@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { $form } from "@/i18n";
+import { $form, $language } from "@/i18n";
 import { $locale, $localeStore } from "@/stores/locale";
 import { $settings } from "@/stores/settings";
 import { useStore } from "@nanostores/vue";
@@ -7,6 +7,7 @@ import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import RadioInput from "./RadioInput.vue";
 
 const form = useStore($form);
+const languageTl = useStore($language);
 
 const theme = ref("numbers");
 const players = ref("1");
@@ -17,11 +18,16 @@ const width = ref(0);
 const languageOptions = computed(() => {
   if (width.value < 420)
     return [
-      form.value.englishSmall,
-      form.value.japaneseSmall,
-      form.value.vietnameseSmall,
+      languageTl.value.englishSmall,
+      languageTl.value.japaneseSmall,
+      languageTl.value.vietnameseSmall,
     ];
-  else return [form.value.english, form.value.japanese, form.value.vietnamese];
+  else
+    return [
+      languageTl.value.english,
+      languageTl.value.japanese,
+      languageTl.value.vietnamese,
+    ];
 });
 
 function handleResize() {

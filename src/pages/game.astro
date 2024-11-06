@@ -1,8 +1,12 @@
 ---
+import GameBoard from "@/components/game/GameBoard.vue";
+import GameMenu from "@/components/game/GameMenu.vue";
+import TranslateMenu from "@/components/game/TranslateMenu.vue";
 import PageLayout from "@/layouts/PageLayout.astro";
-import { $settings } from "@/stores/settings";
 ---
 
 <PageLayout title="Memory Game" description="The implementation of the memory game.">
-  <h1>{JSON.stringify($settings.get())}</h1>
+  <GameBoard client:load />
+  <GameMenu client:load />
+  <TranslateMenu client:load />
 </PageLayout>

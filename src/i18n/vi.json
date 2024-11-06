@@ -6,12 +6,21 @@
     "numberOfPlayers": "Số người chơi",
     "gridSize": "Độ lớn",
     "language": "Ngôn ngữ",
+    "start": "Bắt đầu"
+  },
+  "language": {
     "english": "Anh",
     "japanese": "Nhật",
     "vietnamese": "Việt",
     "englishSmall": "Anh",
     "japaneseSmall": "Nhật",
-    "vietnameseSmall": "Việt",
-    "start": "Bắt đầu"
+    "vietnameseSmall": "Việt"
+  },
+  "game": {
+    "menu": "Menu",
+    "restart": "Làm lại",
+    "new": "Game mới",
+    "resume": "Tiếp tục",
+    "language": "Ngôn ngữ"
   }
 }

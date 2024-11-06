@@ -15,8 +15,6 @@ export default {
       },
       fontFamily: {
         "atkinson-hyperlegible": ["Atkinson Hyperlegible", "sans-serif"],
-        "kosugi-maru": ["Kosugi Maru", "sans-serif"],
-        quicksand: ["Quicksand", "sans-serif"],
       },
     },
   },

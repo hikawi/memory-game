@@ -16,4 +16,22 @@ const $form = i18n("form", {
   "start": "Start Game",
 });
 
-export { $form };
+const $language = i18n("language", {
+  "english": "English",
+  "japanese": "Japanese",
+  "vietnamese": "Vietnamese",
+  "englishSmall": "Eng",
+  "japaneseSmall": "Jpn",
+  "vietnameseSmall": "Vie",
+});
+
+const $game = i18n("game", {
+  "menu": "Menu",
+  "restart": "Restart",
+  "new": "New Game",
+  "resume": "Resume Game",
+  "language": "Language",
+});
+
+export { $form, $game, $language };
+
